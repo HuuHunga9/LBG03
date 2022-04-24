@@ -1,0 +1,236 @@
+/* Modal phone */
+
+.btn-button {
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 10px 35px 10px 20px;
+}
+
+.modal-dangky,
+.modal-phone {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 10000;
+}
+
+.modal-dangky.oppen,
+.modal-phone.oppen {
+    display: flex;
+}
+
+.modal-dangky--item,
+.modal-phone--item {
+    max-width: 400px;
+    min-height: 100px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    animation: toSlide ease 0.5s;
+}
+
+@keyframes toSlide {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-dangky--item__header,
+.modal-phone--item__header {
+    position: relative;
+    margin-top: 8px;
+}
+
+.modal-dangky--close-x,
+.modal-phone--close-x {
+    position: absolute;
+    top: -26px;
+    right: -12px;
+    font-size: 25px;
+    padding: 8px;
+    color: #222;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+.modal-dangky--close-x:hover,
+.modal-phone--close-x:hover {
+    color: rgb(238, 52, 20);
+    transform: rotate(90deg);
+}
+
+.modal-dangky--close-x i,
+.modal-phone--close-x i {}
+
+.modal-dangky--header__img,
+.modal-phone--header__img {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-dangky--header__img img,
+.modal-phone--header__img img {
+    width: 60%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.modal-phone--item__body {}
+
+.modal-phone--body__p {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #222;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.modal--btn {
+    margin-top: 16px;
+    width: 100%;
+    border: 1px solid rgb(239, 86, 85);
+    border-radius: 0.4px;
+    padding: 1.2px 1.6px;
+    font-size: 1.6px;
+    font-weight: 600;
+    background-color: rgb(239, 86, 85);
+    color: #fff;
+    cursor: pointer;
+    opacity: .9;
+    display: block;
+    text-align: center;
+}
+
+.modal--btn:hover {
+    opacity: 1;
+}
+
+.modal--btn i {
+    margin-right: 8px;
+}
+
+.modal-phone--body__p1 {
+    margin-top: 24px;
+}
+
+.form--dangky,
+.form--phone {
+    margin-top: 16px;
+}
+
+.form--dangky .form-group {
+    margin-bottom: 16px;
+}
+
+.form--dangky .form-group .form-textarea,
+.form--dangky .form-group .form-input,
+.form--phone .form-group .form-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 2px solid #222, 2px solid rgb(177, 175, 175);
+    outline-color: rgb(0, 86, 164);
+}
+
+.form--dangky .form-group .form-textarea {
+    resize: none;
+    border: 2px solid #222;
+}
+
+.form--phone .form-group .form-input {
+    text-align: center;
+}
+
+.form--dangky .form-group.validate .form-input,
+.form--phone .form-group.validate .form-input {
+    border: 2px solid rgb(239, 86, 85);
+}
+
+.form--dangky .form-group.validate .form-message,
+.form--phone .form-group.validate .form-message {
+    color: rgb(239, 86, 85);
+}
+
+.form--dangky .form-group .form-message,
+.form--phone .form-group .form-message {
+    font-size: 16px;
+    margin-top: 4px;
+    display: block;
+    color: rgb(239, 86, 85);
+    text-transform: capitalize;
+}
+
+.form--dangky .form-submit,
+.form--phone .form-submit {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 16px;
+    border: 1px solid rgb(0, 86, 164);
+    border-radius: 4px;
+    font-weight: 600;
+    background: rgb(0, 86, 164);
+    color: #fff;
+    cursor: pointer;
+    opacity: .9;
+    transition: all .2s ease;
+    text-transform: capitalize;
+}
+
+.form--phone .form-submit {
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.form--dangky .form-submit:hover,
+.form--phone .form-submit:hover {
+    opacity: 1;
+}
+
+.modal-dangky--body__p1 {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.modal-dangky--body__p1 a {
+    font-weight: 600;
+    color: rgb(0, 86, 164);
+}
+
+.modal-dangky--body__p1:last-child {
+    margin-bottom: 8px;
+}
+
+.modal-dangky--body__p {
+    font-size: 16px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+    .modal-dangky--item {
+        width: calc(100% - 3.2rem);
+    }
+}
